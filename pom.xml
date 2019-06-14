@@ -8,16 +8,18 @@
   <description>Blank project</description>
   
   <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-
-    <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
-    <org.mybatis.version>3.5.1</org.mybatis.version>
-    <org.mybatis.spring.version>2.0.0</org.mybatis.spring.version>
-  </properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	    <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
+	
+	    <org.springframework.version>4.0.0.RELEASE</org.springframework.version>
+	    <org.mybatis.version>3.5.1</org.mybatis.version>
+	    <org.mybatis.spring.version>2.0.0</org.mybatis.spring.version>
+	    <jackson.version>2.9.9</jackson.version>
+	  </properties>
   
-  <dependencies>
+  
+   <dependencies>
   	<!-- tomcat -->
   	<dependency>
 		<groupId>org.apache.tomcat</groupId>
@@ -26,37 +28,73 @@
 	</dependency>
 
 	<!-- spring的依赖包 -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-webmvc</artifactId>
-      <version>${org.springframework.version}</version>
-    </dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-core</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-beans</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-web</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-webmvc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-test</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aop</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-jdbc</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-tx</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context-support</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-oxm</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
 
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-oxm</artifactId>
-      <version>${org.springframework.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>${org.springframework.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${org.springframework.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
-      <version>${org.springframework.version}</version>
-    </dependency>
-
-	 <!--spring-aop依赖-->
+	<!--spring-aop依赖-->
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-aspects</artifactId>
+		<version>${org.springframework.version}</version>
+	</dependency>
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
@@ -67,80 +105,8 @@
       <artifactId>aspectjrt</artifactId>
       <version>1.6.11</version>
     </dependency>
-
-
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>1.9.12</version>
-    </dependency>
-
-    <dependency>
-      <groupId>commons-dbcp</groupId>
-      <artifactId>commons-dbcp</artifactId>
-      <version>1.4</version>
-    </dependency>
-	
-	<!-- shiro -->
-	<!-- <dependency>
-		<groupId>org.apache.shiro</groupId>
-		<artifactId>shiro-core</artifactId>
-		<version>${shiro.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.shiro</groupId>
-		<artifactId>shiro-web</artifactId>
-		<version>${shiro.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.shiro</groupId>
-		<artifactId>shiro-quartz</artifactId>
-		<version>${shiro.version}</version>
-	</dependency>
-	<dependency>
-		<groupId>org.apache.shiro</groupId>
-		<artifactId>shiro-spring</artifactId>
-		<version>${shiro.version}</version>
-	</dependency> -->
-	
-	<!-- 阿里druid数据源 -->
-	<dependency>
-	    <groupId>com.alibaba</groupId>
-	    <artifactId>druid</artifactId>
-	    <version>1.1.17</version>
-	</dependency>
-	<!-- 阿里的json -->
-	<dependency>
-	    <groupId>com.alibaba</groupId>
-	    <artifactId>fastjson</artifactId>
-	    <version>1.2.58</version>
-	</dependency>
-	
-	<!-- redis -->
-	<dependency>
-		<groupId>redis.clients</groupId>
-		<artifactId>jedis</artifactId>
-		<version>2.9.0</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.springframework.data</groupId>
-	    <artifactId>spring-data-redis</artifactId>
-	    <version>2.1.8.RELEASE</version>
-	</dependency>
-
-	<!-- slf4j日志框架 -->
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-api</artifactId>
-	    <version>1.7.26</version>
-	</dependency>
-	<dependency>
-	    <groupId>org.slf4j</groupId>
-	    <artifactId>slf4j-log4j12</artifactId>
-	    <version>1.7.25</version>
-	</dependency>
-
-	<!-- MySQL Connector/J -->
+    
+    <!-- MySQL Connector/J -->
 	<dependency>
 	    <groupId>mysql</groupId>
 	    <artifactId>mysql-connector-java</artifactId>
@@ -158,16 +124,46 @@
 		<artifactId>mybatis-spring</artifactId>
 		<version>${org.mybatis.spring.version}</version>
 	</dependency>
-	
 
-	<!-- Google Core Libraries For Java -->
-	<dependency>
-	    <groupId>com.google.guava</groupId>
-	    <artifactId>guava</artifactId>
-	    <version>27.0.1-jre</version>
+	<!-- jackson工具类 -->
+    <dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>${jackson.version}</version>
 	</dependency>
-
-
+	
+	<!-- dbcp数据源 -->
+	<dependency>
+		<groupId>commons-dbcp</groupId>
+		<artifactId>commons-dbcp</artifactId>
+		<version>1.4</version>
+	</dependency>
+	
+	<!-- 阿里druid数据源 -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>1.1.17</version>
+	</dependency>
+	<!-- 阿里的json -->
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>fastjson</artifactId>
+	    <version>1.2.58</version>
+	</dependency>
+	
+	<!-- slf4j日志框架 -->
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-api</artifactId>
+	    <version>1.7.26</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.slf4j</groupId>
+	    <artifactId>slf4j-log4j12</artifactId>
+	    <version>1.7.25</version>
+	</dependency>
+	
 	<!-- Apache Commons Lang3 -->
 	<dependency>
 	    <groupId>org.apache.commons</groupId>
@@ -188,7 +184,6 @@
 	    <artifactId>commons-beanutils</artifactId>
 	    <version>1.9.3</version>
 	</dependency>
-	
 
 	<!-- junit  -->
 	<dependency>
@@ -230,7 +225,73 @@
       <artifactId>commons-io</artifactId>
       <version>2.4</version>
     </dependency>
+    
+    <!-- redis -->
+	<!-- <dependency>
+		<groupId>redis.clients</groupId>
+		<artifactId>jedis</artifactId>
+		<version>2.9.0</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-redis</artifactId>
+	    <version>2.1.8.RELEASE</version>
+	</dependency> -->
+    
+    <!-- Google Core Libraries For Java -->
+	<!-- <dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>27.0.1-jre</version>
+	</dependency> -->
+    
+    <!-- shiro -->
+	<!-- <dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-core</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-web</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-quartz</artifactId>
+		<version>${shiro.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-spring</artifactId>
+		<version>${shiro.version}</version>
+	</dependency> -->
+    
+	<!-- 消息队列 -->
+	<!-- <dependency>
+		<groupId>com.rabbitmq</groupId>
+		<artifactId>amqp-client</artifactId>
+		<version>5.7.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.amqp</groupId>
+		<artifactId>spring-rabbit</artifactId>
+		<version>2.1.6.RELEASE</version>
+	</dependency> -->
 
+	<!-- 字符加密、解密 -->
+	<!-- <dependency>
+	    <groupId>commons-codec</groupId>
+	    <artifactId>commons-codec</artifactId>
+	    <version>1.12</version>
+	</dependency> -->
+	
+	<!-- 数据校验 -->
+	<!-- <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>6.0.16.Final</version>
+	</dependency> -->
   
   </dependencies>
   
