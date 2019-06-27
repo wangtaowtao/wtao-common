@@ -1,4 +1,4 @@
-package com.common.example;
+package com.eyaoshun.common.util;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
